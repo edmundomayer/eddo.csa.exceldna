@@ -6,15 +6,17 @@ namespace eddo.csa.exceldna.hosting
 {
     public abstract class HostedExcelAddIn : IExcelAddIn
     {
+        #region Internals
         private IHost _host;
+        #endregion Internals
 
+
+        #region Methods
         protected virtual void AutoOpen( IHost host )
-        {
-        }
+        { }
 
         protected virtual void AutoClose( IHost host )
-        {
-        }
+        { }
 
         protected virtual void OnException( Exception e )
         {
@@ -22,7 +24,10 @@ namespace eddo.csa.exceldna.hosting
         }
 
         protected abstract IHostBuilder CreateHostBuilder();
+        #endregion Methods
 
+
+        #region Implements Interface IExcelAddIn
         void IExcelAddIn.AutoOpen()
         {
             try
@@ -52,5 +57,6 @@ namespace eddo.csa.exceldna.hosting
                 throw;
             }
         }
+        #endregion Implements Interface IExcelAddIn
     }
 }

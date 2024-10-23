@@ -1,21 +1,32 @@
-﻿using ExcelDna.Registration;
+﻿using eddo.csa.exceldna.hosting.Interfaces;
+using ExcelDna.Registration;
 using Microsoft.Extensions.Hosting;
 
 namespace eddo.csa.exceldna.hosting
 {
     internal class ExcelFunctionsRegistrar : IHostedService
     {
+        #region Internals
         private readonly IExcelFunctionsProvider _excelFunctionsProvider;
         private readonly IEnumerable<IExcelFunctionsProcessor> _excelFunctionsProcessors;
+        #endregion Internals
 
+
+        #region Constructors & Destructors
         public ExcelFunctionsRegistrar( IExcelFunctionsProvider excelFunctionsProvider, IEnumerable<IExcelFunctionsProcessor> excelFunctionsProcessors )
         {
             _excelFunctionsProvider = excelFunctionsProvider;
             _excelFunctionsProcessors = excelFunctionsProcessors;
         }
+        #endregion Constructors & Destructors
 
+
+        #region Properties
         internal Action<IEnumerable<ExcelFunctionRegistration>> RegisterFunctions { get; set; } = functions => functions.RegisterFunctions();
+        #endregion Properties
 
+
+        #region Implements Interface IHostedService
         public Task StartAsync( CancellationToken cancellationToken )
         {
             var functions = _excelFunctionsProcessors.Aggregate(
@@ -26,5 +37,6 @@ namespace eddo.csa.exceldna.hosting
         }
 
         public Task StopAsync( CancellationToken cancellationToken ) => Task.CompletedTask;
+        #endregion Implements Interface IHostedService
     }
 }

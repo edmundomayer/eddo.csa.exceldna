@@ -1,15 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelDna.AddIn" Version="*-*" />
+    <PackageReference Include="ExcelDna.AddIn" Version="1.8.0" />
     <PackageReference Include="ExcelDna.Interop" Version="*-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eddo.csa.exceldna.hosting\eddo.csa.exceldna.hosting.csproj" />
   </ItemGroup>
 
   <ItemGroup>
