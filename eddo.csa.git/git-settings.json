@@ -1,0 +1,56 @@
+{
+  "GitSettings": {
+    "Alias": "TestConfiguration",
+    "PatchFileRegexPattern": "(?<pre>git\\sa\\/)(?<change>.*)(?<post>\\sb\\/.*)",
+    "Branches": [
+      {
+        "Name": "Hotfix",
+        "Alias": "hotfix",
+        "Order": 1,
+        "BranchPath": "C:\\GIT\\HOTFIX",
+        "OutputPath": "C:\\GIT\\MyPatches\\Hotfix\\",
+        "Configuration": [
+          {
+            "Alias": "Data",
+            "PatchFileTypes": "Data",
+            "PatchFileName": "00-Data-EDDO-only.diff"
+          },
+          {
+            "Alias": "Code",
+            "PatchFileTypes": "Code",
+            "PatchFileName": "01-Code Changes.diff"
+          },
+          {
+            "Alias": "Config",
+            "PatchFileTypes": "Config",
+            "PatchFileName": "02-Configs.diff"
+          }
+        ]
+      },
+      {
+        "Name": "CSATeam-Evo1",
+        "Alias": "Branch1",
+        "Order": 2,
+        "BranchPath": "C:\\GIT\\EVO1",
+        "OutputPath": "C:\\GIT\\MyPatches\\Evo1\\",
+        "Configuration": [
+          {
+            "Alias": "Data",
+            "PatchFileTypes": "Data",
+            "PatchFileName": "00-Data-EDDO-only.diff"
+          },
+          {
+            "Alias": "Code",
+            "PatchFileTypes": "Code",
+            "PatchFileName": "01-Code Changes.diff"
+          },
+          {
+            "Alias": "Config",
+            "PatchFileTypes": "Config",
+            "PatchFileName": "02-Configs.diff"
+          }
+        ]
+      }
+    ]
+  }
+}

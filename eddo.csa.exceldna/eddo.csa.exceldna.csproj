@@ -1,18 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ExcelDna.AddIn" Version="*-*" />
-    <PackageReference Include="ExcelDna.Interop" Version="*-*" />
+    <Compile Remove="Models\**" />
+    <Compile Remove="RibbonResources\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <EmbeddedResource Remove="RibbonResources\**" />
+    <None Remove="Models\**" />
+    <None Remove="RibbonResources\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="ExcelDna.AddIn" Version="1.8.0" />
+    <PackageReference Include="ExcelDna.IntelliSense" Version="1.8.0" />
+    <PackageReference Include="ExcelDna.Interop" Version="*-*" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eddo.csa.environments\eddo.csa.environments.csproj" />
+    <ProjectReference Include="..\eddo.csa.exceldna.hosting\eddo.csa.exceldna.hosting.csproj" />
+    <ProjectReference Include="..\eddo.csa.git\eddo.csa.git.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Git\Resources\GitResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GitResource.resx</DependentUpon>
+    </Compile>
     <Compile Update="RibbonResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -21,10 +44,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Git\Resources\GitResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GitResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="RibbonResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>RibbonResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>eddo.csa.tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
 </Project>

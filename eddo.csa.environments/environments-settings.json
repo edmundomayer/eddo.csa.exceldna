@@ -1,0 +1,950 @@
+{
+  "EnvironmentSettings": {
+    "MSBuild": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\MSBuild.exe",
+    "PublishTemplate": "C:\\Temp\\Templates\\default.pubxml.xml",
+    "Branches": [
+      {
+        "BranchName": "HOTFIX",
+        "BaseBranchPath": "C:\\GIT\\HOTFIX",
+        "PublishType": "Release",
+        "BaseConfigurationPath": "C:\\GIT\\CSA\\Environments\\eddo.csa.environments\\Utils\\ClientSide\\Configs",
+        "BasePublishPath": "C:\\temp\\Publish",
+        "ResultCommandFile": "C:\\temp\\Publish\\{0} Generate HOTFIX.bat",
+        "Sections": [
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "1",
+                "Type": "Web",
+                "Component": "FIBA",
+                "ProjectPath": "WEB User Interface\\FIBA.Presentation.Web\\FIBA.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "2",
+                "Type": "Web",
+                "Component": "FIBAMON",
+                "ProjectPath": "MONITORING\\FIBA.Monitoring.Presentation.Web\\FIBA.Monitoring.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Monitoring.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  },
+                  {
+                    "Source": "js\\config.js",
+                    "Destination": "js\\config.js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "3",
+                "Type": "Services",
+                "Component": "Aftersales",
+                "ProjectPath": "AfterSales\\FIBA.AfterSales.Hosting.IIS\\FIBA.AfterSales.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.AfterSales.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "4",
+                "Type": "Services",
+                "Component": "Dealers",
+                "ProjectPath": "Commissions And Subsidies\\FIBA.CommissionAndSubsidies.Hosting.IIS\\FIBA.CommissionAndSubsidies.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.CommissionAndSubsidies.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "5",
+                "Type": "Services",
+                "Component": "DocumentGeneration",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.IIS\\FIBA.Documents.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Documents.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sectionname": "web_services_managers",
+            "configurations": [
+              {
+                "order": "6",
+                "type": "services",
+                "component": "formalization",
+                "projectpath": "formalization\\fiba.formalization.hosting.iis\\fiba.formalization.hosting.iis.csproj",
+                "publishprofile": "fiba.formalization.hosting.iis.pubxml",
+                "clearbeforebuild": "false",
+                "build": "true",
+                "additionalconfigurationcopy": [
+                  {
+                    "source": "web.config",
+                    "destination": "web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "7",
+                "Type": "Services",
+                "Component": "Ivr",
+                "ProjectPath": "Ivr\\FIBA.Ivr.Hosting.IIS\\FIBA.Ivr.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Ivr.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "8",
+                "Type": "Services",
+                "Component": "ReportGeneration",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.IIS\\FIBA.ReportManagement.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.ReportManagement.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "9",
+                "Type": "Managers",
+                "Component": "DocumentManager",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.WindowsService\\FIBA.Documents.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Documents.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Documents.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "10",
+                "Type": "Managers",
+                "Component": "EventManager",
+                "ProjectPath": "Event Management\\FIBA.Events.Hosting.WindowsService\\FIBA.Events.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Events.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Events.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "11",
+                "Type": "Managers",
+                "Component": "FileManager",
+                "ProjectPath": "File Management\\FIBA.Files.Hosting.WindowsService\\FIBA.Files.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Files.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Files.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "12",
+                "Type": "Managers",
+                "Component": "NotificationManager",
+                "ProjectPath": "Notification Management\\FIBA.Notifications.Hosting.WindowsService\\FIBA.Notifications.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Notifications.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Notifications.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "13",
+                "Type": "Managers",
+                "Component": "ProcessManager",
+                "ProjectPath": "Process Manager\\FIBA.ProcessManager.Hosting.WindowsService\\FIBA.ProcessManager.Hosting.WindowsService.csproj",
+                "PublishProfile": "FIBA.ProcessManager.Hosting.WindowsService.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ProcessManager.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ProcessManager.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "14",
+                "Type": "Managers",
+                "Component": "ReportManager",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.WindowsService\\FIBA.ReportManagement.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ReportManagement.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ReportManagement.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "15",
+                "Type": "Managers",
+                "Component": "WorklistManager",
+                "ProjectPath": "Worklists\\FIBA.Worklists.Hosting.WindowsService\\FIBA.Worklists.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Worklists.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Worklists.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BranchName": "EVO1",
+        "BaseBranchPath": "C:\\GIT\\EVO1",
+        "PublishType": "Release",
+        "BaseConfigurationPath": "C:\\GIT\\CSA\\Environments\\eddo.csa.environments\\Utils\\ClientSide\\Configs",
+        "BasePublishPath": "C:\\temp\\Publish",
+        "ResultCommandFile": "C:\\temp\\Publish\\{0} Generate EVO1.bat",
+        "Sections": [
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "1",
+                "Type": "Web",
+                "Component": "FIBA",
+                "ProjectPath": "WEB User Interface\\FIBA.Presentation.Web\\FIBA.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "2",
+                "Type": "Web",
+                "Component": "FIBAMON",
+                "ProjectPath": "MONITORING\\FIBA.Monitoring.Presentation.Web\\FIBA.Monitoring.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Monitoring.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  },
+                  {
+                    "Source": "js\\config.js",
+                    "Destination": "js\\config.js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "3",
+                "Type": "Services",
+                "Component": "Aftersales",
+                "ProjectPath": "AfterSales\\FIBA.AfterSales.Hosting.IIS\\FIBA.AfterSales.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.AfterSales.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "4",
+                "Type": "Services",
+                "Component": "Dealers",
+                "ProjectPath": "Commissions And Subsidies\\FIBA.CommissionAndSubsidies.Hosting.IIS\\FIBA.CommissionAndSubsidies.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.CommissionAndSubsidies.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "5",
+                "Type": "Services",
+                "Component": "DocumentGeneration",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.IIS\\FIBA.Documents.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Documents.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sectionname": "web_services_managers",
+            "configurations": [
+              {
+                "order": "6",
+                "type": "services",
+                "component": "formalization",
+                "projectpath": "formalization\\fiba.formalization.hosting.iis\\fiba.formalization.hosting.iis.csproj",
+                "publishprofile": "fiba.formalization.hosting.iis.pubxml",
+                "clearbeforebuild": "false",
+                "build": "true",
+                "additionalconfigurationcopy": [
+                  {
+                    "source": "web.config",
+                    "destination": "web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "7",
+                "Type": "Services",
+                "Component": "Ivr",
+                "ProjectPath": "Ivr\\FIBA.Ivr.Hosting.IIS\\FIBA.Ivr.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Ivr.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "8",
+                "Type": "Services",
+                "Component": "ReportGeneration",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.IIS\\FIBA.ReportManagement.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.ReportManagement.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "9",
+                "Type": "Managers",
+                "Component": "DocumentManager",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.WindowsService\\FIBA.Documents.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Documents.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Documents.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "10",
+                "Type": "Managers",
+                "Component": "EventManager",
+                "ProjectPath": "Event Management\\FIBA.Events.Hosting.WindowsService\\FIBA.Events.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Events.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Events.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "11",
+                "Type": "Managers",
+                "Component": "FileManager",
+                "ProjectPath": "File Management\\FIBA.Files.Hosting.WindowsService\\FIBA.Files.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Files.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Files.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "12",
+                "Type": "Managers",
+                "Component": "NotificationManager",
+                "ProjectPath": "Notification Management\\FIBA.Notifications.Hosting.WindowsService\\FIBA.Notifications.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Notifications.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Notifications.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "13",
+                "Type": "Managers",
+                "Component": "ProcessManager",
+                "ProjectPath": "Process Manager\\FIBA.ProcessManager.Hosting.WindowsService\\FIBA.ProcessManager.Hosting.WindowsService.csproj",
+                "PublishProfile": "FIBA.ProcessManager.Hosting.WindowsService.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ProcessManager.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ProcessManager.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "14",
+                "Type": "Managers",
+                "Component": "ReportManager",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.WindowsService\\FIBA.ReportManagement.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ReportManagement.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ReportManagement.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "15",
+                "Type": "Managers",
+                "Component": "WorklistManager",
+                "ProjectPath": "Worklists\\FIBA.Worklists.Hosting.WindowsService\\FIBA.Worklists.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Worklists.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Worklists.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "BranchName": "EVO2",
+        "BaseBranchPath": "C:\\GIT\\EVO2",
+        "PublishType": "Release",
+        "BaseConfigurationPath": "C:\\GIT\\CSA\\Environments\\eddo.csa.environments\\Utils\\ClientSide\\Configs",
+        "BasePublishPath": "C:\\temp\\Publish",
+        "ResultCommandFile": "C:\\temp\\Publish\\{0} Generate EVO2.bat",
+        "Sections": [
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "1",
+                "Type": "Web",
+                "Component": "FIBA",
+                "ProjectPath": "WEB User Interface\\FIBA.Presentation.Web\\FIBA.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "2",
+                "Type": "Web",
+                "Component": "FIBAMON",
+                "ProjectPath": "MONITORING\\FIBA.Monitoring.Presentation.Web\\FIBA.Monitoring.Presentation.Web.csproj",
+                "PublishProfile": "FIBA.Monitoring.Presentation.Web.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  },
+                  {
+                    "Source": "js\\config.js",
+                    "Destination": "js\\config.js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "3",
+                "Type": "Services",
+                "Component": "Aftersales",
+                "ProjectPath": "AfterSales\\FIBA.AfterSales.Hosting.IIS\\FIBA.AfterSales.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.AfterSales.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "4",
+                "Type": "Services",
+                "Component": "Dealers",
+                "ProjectPath": "Commissions And Subsidies\\FIBA.CommissionAndSubsidies.Hosting.IIS\\FIBA.CommissionAndSubsidies.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.CommissionAndSubsidies.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "5",
+                "Type": "Services",
+                "Component": "DocumentGeneration",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.IIS\\FIBA.Documents.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Documents.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sectionname": "web_services_managers",
+            "configurations": [
+              {
+                "order": "6",
+                "type": "services",
+                "component": "formalization",
+                "projectpath": "formalization\\fiba.formalization.hosting.iis\\fiba.formalization.hosting.iis.csproj",
+                "publishprofile": "fiba.formalization.hosting.iis.pubxml",
+                "clearbeforebuild": "false",
+                "build": "true",
+                "additionalconfigurationcopy": [
+                  {
+                    "source": "web.config",
+                    "destination": "web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "7",
+                "Type": "Services",
+                "Component": "Ivr",
+                "ProjectPath": "Ivr\\FIBA.Ivr.Hosting.IIS\\FIBA.Ivr.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.Ivr.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "8",
+                "Type": "Services",
+                "Component": "ReportGeneration",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.IIS\\FIBA.ReportManagement.Hosting.IIS.csproj",
+                "PublishProfile": "FIBA.ReportManagement.Hosting.IIS.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "Web.config",
+                    "Destination": "Web.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "9",
+                "Type": "Managers",
+                "Component": "DocumentManager",
+                "ProjectPath": "Document Management\\FIBA.Documents.Hosting.WindowsService\\FIBA.Documents.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Documents.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Documents.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "10",
+                "Type": "Managers",
+                "Component": "EventManager",
+                "ProjectPath": "Event Management\\FIBA.Events.Hosting.WindowsService\\FIBA.Events.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Events.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Events.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "11",
+                "Type": "Managers",
+                "Component": "FileManager",
+                "ProjectPath": "File Management\\FIBA.Files.Hosting.WindowsService\\FIBA.Files.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Files.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Files.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "12",
+                "Type": "Managers",
+                "Component": "NotificationManager",
+                "ProjectPath": "Notification Management\\FIBA.Notifications.Hosting.WindowsService\\FIBA.Notifications.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Notifications.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Notifications.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "13",
+                "Type": "Managers",
+                "Component": "ProcessManager",
+                "ProjectPath": "Process Manager\\FIBA.ProcessManager.Hosting.WindowsService\\FIBA.ProcessManager.Hosting.WindowsService.csproj",
+                "PublishProfile": "FIBA.ProcessManager.Hosting.WindowsService.pubxml",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ProcessManager.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ProcessManager.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "14",
+                "Type": "Managers",
+                "Component": "ReportManager",
+                "ProjectPath": "Report Management\\FIBA.ReportManagement.Hosting.WindowsService\\FIBA.ReportManagement.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.ReportManagement.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.ReportManagement.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "SectionName": "Web_Services_Managers",
+            "Configurations": [
+              {
+                "Order": "15",
+                "Type": "Managers",
+                "Component": "WorklistManager",
+                "ProjectPath": "Worklists\\FIBA.Worklists.Hosting.WindowsService\\FIBA.Worklists.Hosting.WindowsService.csproj",
+                "PublishProfile": "",
+                "ClearBeforeBuild": "false",
+                "Build": "true",
+                "AdditionalConfigurationCopy": [
+                  {
+                    "Source": "FIBA.Worklists.Hosting.WindowsService.exe.config",
+                    "Destination": "FIBA.Worklists.Hosting.WindowsService.exe.config"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

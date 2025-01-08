@@ -1,0 +1,12 @@
+﻿<!--<customUI xmlns='http://schemas.microsoft.com/office/2009/07/customui' onLoad='Ribbon_Load'>
+  <ribbon>
+    <tabs>
+      <tab idMso='csa_l2' label='CSA L2'>
+        <group id='snow' label='Snow'>
+          <button id='button1' getEnabled='btn_GetEnabled' getLabel='btn_GetLabel' onAction='LoadDownloadedSnow'/>
+          <button id='btnLoadSnow' label='Load Downloaded Snow' onAction='LoadDownloadedSnow' />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>-->
